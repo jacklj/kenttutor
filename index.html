@@ -123,7 +123,7 @@
 										<textarea name="message" id="message" rows="5"></textarea>
 									</div>
 									<ul class="actions">
-										<li><a href="" class="button submit" onclick="document.getElementById('contact_form').submit();">Send Message</a></li>
+										<li><a href="#" class="button submit" id="form_submit_button">Send Message</a></li>
 									</ul>
 								</form>
 							</div>
@@ -397,6 +397,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script>
+			$( "#form_submit_button" ).click(function(event) {
+			  	event.preventDefault();
+			  	$("#contact_form").submit();
+			});
+			  	
+			</script>
 
 	</body>
 </html>
